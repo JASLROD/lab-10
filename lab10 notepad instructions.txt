@@ -1,0 +1,31 @@
+Person
+- name: String
++ CURRENT_YEAR: int //set to 2025 (Is final and static)
+
++ Person () //name set to “No name yet”
++ Person (name:String) 
++ setName (name:String): void
++ getName (): String
++ toString(): String // Prints out Name: <name field>
+
+
+
+
+
+Use the Person class to create an Employee class that extends Person. 
+Employee has two private instance variables: 
+(1) an integer called hireYear and 
+(2) a String called idNum. 
+It will be necessary to create two constructors. 
+The no-arg constructor calls super() and 
+sets hireYear to 0 and idNum to Onboarding. 
+The other constructor accepts three arguments - 
+a String for name, 
+an int for hireYear, and 
+a String for idNum. 
+You will need to create two public methods 
+equals(Object o) and 
+getServiceYears(). 
+getServiceYears() subtracts hireYear from CURRENT_YEAR. 
+NOTE CURRENT_YEAR is accessible to Person and all classes with an is-a relationship with 
+Person (all the other classes).
