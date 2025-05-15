@@ -31,7 +31,7 @@ public class Person
     public Person(String name)
     {
         // put your code here
-        return x + y;
+        this.name = name;
     }
     
     /**
@@ -43,7 +43,7 @@ public class Person
     public void setName(String name)
     {
         // put your code here
-        return x + y;
+        this.name = name;
     }
     
     /**
@@ -64,9 +64,10 @@ public class Person
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public toString()
+    public String toString()
     {
-        // put your code here
-        return x + y;
+        String str;
+        str = "Name" +  + "\nID Number: " + +"Years Of Service: "+ +"\nSalary: " + ;// put your code here
+        return str;
     }
 }

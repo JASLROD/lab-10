@@ -6,7 +6,7 @@
  * @version v1.0
  * @since 5/13/2025
  */
-public class Employee
+public class Employee extends Person //create an Employee class that extends Person
 {
     // instance variables - replace the example below with your own
     private int hireYear;//- integer called hireYear
@@ -15,10 +15,9 @@ public class Employee
     /**
      * Constructor for objects of class Employee
      */
-    public super()
+    public Employee()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
 
     /**
