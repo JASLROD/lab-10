@@ -29,3 +29,63 @@ getServiceYears().
 getServiceYears() subtracts hireYear from CURRENT_YEAR. 
 NOTE CURRENT_YEAR is accessible to Person and all classes with an is-a relationship with 
 Person (all the other classes).
+
+
+
+Employee Methods (with appropriate javadocs)
+1) equals() based on idNum - a unique entry in a fictional database (see below).
+2) getServiceYears() returns the difference between CURRENT_YEAR and hireYear. 
+3) getter and setter methods for hireDate and idNum.
+4) toString() (line1) “Name: “ with name, (line2)“ID Number:” with idNum, (line3) “Year 
+Hired: “ with year employee was hired and “Years of Service:” with years of service. 
+HINT-In the Employee.toString(), you should incorporate super.toString() to pull 
+toString() info from Person. 
+ public boolean equals (Object o){
+ boolean isEqual = false;
+ if (o != null && getClass()==o.getClass()){
+ Employee copy = (Employee)o;
+ if (idNum.equalsIgnoreCase(copy.idNum))
+ isEqual = true;
+ }
+ return isEqual;
+ }
+
+
+
+
+HRDemo Details
+1) Create a FullTime object called fred passing in the following arguments to an 
+appropriate FullTime constructor - "Flinstone, Fred", 2013, "BR-1", 75000.1234.
+2) Create an Adjunct object called barney passing in the following arguments to an 
+appropriate Adjunct constructor – “Rubble, Barney", 2014, "BR-2", 320, 60.55. 
+320 represents the hours for teaching 2 courses for 2 semesters per year, 60.55 
+is the hourly rate.
+3) Create a default FullTime object called wilma.
+4) Use an appropriate setter to update the wilma object’s name to “Flintstone, 
+Wilma"
+5) Use an appropriate setter to update the wilma object’s idNum to “BR-3"
+6) Use an appropriate setter to update the wilma object’s hireYear to 2016
+7) Use an appropriate setter to update the wilma object’s salary to 78123.2468
+8) Create a new Employee object called betty passing in the following arguments 
+to an appropriate Employee constructor - "Rubble, Betty", 2020, "BR-4"
+9) Create a FullTime object called wilma2 passing in the following arguments to an 
+appropriate FullTime constructor - "Slate, Wilma", 2016, "BR-3", 78123.2468
+10) Create an array called staff that is a collection of ??. HINT: What is the most 
+basic superclass between Person, Employee, FullTime, and Adjunct? Create 
+staff based on this collection type as all other objects will have a is-a relationship 
+to the top most superclass. Polymorphism will be able to take care of knowing 
+Prof Rico Cassoni
+Lab 10 
+how to appropriately print an object based on its type even in there are multiple 
+types in staff. Initialize staff with fred, barney, wilma, betty, 
+wilma2 objects.
+11) Print out each of the staff objects (created above). You can either use a for 
+each loop or you can use a standard for loop. Print out Employee (i+1) before 
+each entry. If using a for each, you can create an index before the for each and 
+increment the number in the for each loop. 
+12) Use the provided equals() to determine if wilma and wilma2 are the same.
+13) After confirming that wilma and wilma2 are the same objects, use an appropriate 
+setter to update the wilma object name to “Slate, Wilma”
+14) Create and initialize a new array called staff2 with fred, barney, wilma, 
+betty objects. 
+15) Repeat step 11 above. 
