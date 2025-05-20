@@ -89,3 +89,33 @@ setter to update the wilma object name to “Slate, Wilma”
 14) Create and initialize a new array called staff2 with fred, barney, wilma, 
 betty objects. 
 15) Repeat step 11 above. 
+
+or(Person object: staff)
+        {
+            System.out.print("\nEmployee" + (index+1));
+            System.out.print("\n" + object + "\n");
+            index++;
+
+        }
+
+rplace with printStaff(staff);
+
+
+
+
+
+Person[] staff2 = {fred, barney, wilma, betty};
+        index = 0;
+        for(Person object: staff2){
+            System.out.print("\nEmployee" + (index+1));
+            System.out.print("\n" + object + "\n");
+            index++;
+
+replace with 
+
+printStaff(staff2);
+
+
+
+
+

@@ -1,33 +1,72 @@
 
 /**
- * Write a description of class FullTime here.
+ * Represents a full-time employee with a fixed annual salary.
+ * Inherits basic employee details from the Employee class.
+ * Adds salary-specific behavior.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
+ * @version v1.0
+ * @since 5/13/2025
  */
 public class FullTime extends Employee
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private double salary;
 
     /**
-     * Constructor for objects of class FullTime
+     * Default constructor that initializes the FullTime employee with default values:
+     * name and ID set by superclass, salary set to 0.0.
      */
     public FullTime()
     {
-        // initialise instance variables
-        x = 0;
+        super();
+        salary = 0.0;
+    }
+    
+    /**
+     * Constructs a FullTime employee with a specified name, hire year,
+     * employee ID number, and salary.
+     *
+     * @param name   The employee's name.
+     * @param year   The year the employee was hired.
+     * @param idNum  The employee's ID number.
+     * @param salary The annual salary of the employee.
+     */
+    public FullTime(String name, int year, String idNum, double salary)
+    {
+        super(name, year, idNum);
+        this.salary = salary;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Sets the salary for the full-time employee.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param salary The new annual salary to assign.
      */
-    public int sampleMethod(int y)
+    public void setSalary(double salary)
     {
-        // put your code here
-        return x + y;
+        this.salary = salary;
     }
+
+    /**
+     * Retrieves the full-time employee's salary.
+     *
+     * @return The current annual salary.
+     */
+    public double getSalary()
+    {
+        return salary;
+    }
+
+    /**
+     * Returns a string representation of the FullTime employee,
+     * including details from the superclass and salary information.
+     *
+     * @return A formatted string with full-time employee details.
+     */
+    public String toString()
+    {
+        String str = super.toString() + String.format("\nSalary: $%,.2f", salary);
+        return str;
+    }
+
 }

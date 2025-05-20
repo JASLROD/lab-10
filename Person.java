@@ -1,73 +1,69 @@
 
 /**
- * Write a description of class Person here.
- *
+ * Represents a Person with a name.
+ * Provides methods to set and retrieve the person's name.
+ * Also includes a constant for the current year.
+ * 
  * @author Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
  * @version v1.0
  * @since 5/13/2025
  */
 public class Person
 {
-    // instance variables - replace the example below with your own
     private String name;//- name: String
     public final static int CURRENT_YEAR = 2025;//+ CURRENT_YEAR: int //set to 2025 (Is final and static)
 
-
     /**
-     * Constructor for objects of class Person
+     * Default constructor that initializes the person's name to "No name yet".
      */
     public Person() 
     {
-        // initialise instance variables
+
         name = "No name yet";// name set to "No name yet"
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * overloaded constructor
+     * Constructs a Person object with a specified name.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param name The name to assign to the person.
      */
     public Person(String name)
     {
-        // put your code here
+
         this.name = name;
     }
-    
+
     /**
-     * An example of a method - replace this comment with your own
+     * Sets the person's name to the specified value.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param name The new name for the person.
      */
     public void setName(String name)
     {
-        // put your code here
+
         this.name = name;
     }
-    
+
     /**
-     * An example of a method - replace this comment with your own
+     * Retrieves the person's name.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return The current name of the person.
      */
-    public getName()
+    public String getName()
     {
-        // put your code here
-        return x + y;
+
+        return name;
     }
-    
+
     /**
-     * An example of a method - replace this comment with your own
+     * Returns a string representation of the Person object.
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return A formatted string containing the person's name.
      */
     public String toString()
     {
-        String str;
-        str = "Name" +  + "\nID Number: " + +"Years Of Service: "+ +"\nSalary: " + ;// put your code here
+        String str = String.format("Name: %s", name);
         return str;
     }
 }
